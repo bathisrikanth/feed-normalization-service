@@ -141,7 +141,7 @@ Receives feed data in Beta’s format. See [Message formats](#message-formats) f
 **Alpha — odds update**
 
 ```bash
-curl -X POST http://localhost:8080/provider-alpha/feed \
+curl -i -X POST http://localhost:8080/provider-alpha/feed \
   -H "Content-Type: application/json" \
   -d '{"msg_type": "odds_update", "event_id": "ev123", "values": {"1": 2.0, "X": 3.1, "2": 3.8}}'
 ```
@@ -149,7 +149,7 @@ curl -X POST http://localhost:8080/provider-alpha/feed \
 **Alpha — settlement**
 
 ```bash
-curl -X POST http://localhost:8080/provider-alpha/feed \
+curl -i -X POST http://localhost:8080/provider-alpha/feed \
   -H "Content-Type: application/json" \
   -d '{"msg_type": "settlement", "event_id": "ev123", "outcome": "1"}'
 ```
@@ -157,7 +157,7 @@ curl -X POST http://localhost:8080/provider-alpha/feed \
 **Beta — odds update**
 
 ```bash
-curl -X POST http://localhost:8080/provider-beta/feed \
+curl -i -X POST http://localhost:8080/provider-beta/feed \
   -H "Content-Type: application/json" \
   -d '{"type": "ODDS", "event_id": "ev456", "odds": {"home": 1.95, "draw": 3.2, "away": 4.0}}'
 ```
@@ -165,7 +165,7 @@ curl -X POST http://localhost:8080/provider-beta/feed \
 **Beta — settlement**
 
 ```bash
-curl -X POST http://localhost:8080/provider-beta/feed \
+curl -i -X POST http://localhost:8080/provider-beta/feed \
   -H "Content-Type: application/json" \
   -d '{"type": "SETTLEMENT", "event_id": "ev456", "result": "away"}'
 ```
