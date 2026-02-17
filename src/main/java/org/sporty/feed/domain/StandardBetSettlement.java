@@ -31,5 +31,14 @@ public class StandardBetSettlement implements StandardMessage {
     public MarketOutcome getResult() {
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "StandardBetSettlement{" +
+                "eventId='" + eventId + '\'' +
+                ", result=" + result +
+                ", provider='" + provider + '\'' +
+                '}';
+    }
 }
 
